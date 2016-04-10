@@ -1,0 +1,10 @@
+<%= link_to "New Event", new_event_path %>
+
+<% @events.each do |event| %>
+	<%= event.event_name %>
+	<%= event.event_date_from.strftime("%m/%d/%Y") %>
+	<%= event.event_date_to.strftime("%m/%d/%Y")%>
+	<%= event.event_deadline.strftime("%m/%d/%Y") %>
+	<%= event.event_price_before_deadline %>
+	<%= event.event_price_after_deadline %>
+	<% end %>

@@ -1,0 +1,21 @@
+<%=form_for(@event) do |f| %>
+<%=f.label :event_name, "Event Name" %>
+<%=f.text_field :event_name %>
+
+<%=f.label :event_date_from, "Event From" %>
+<%=f.date_field :event_date_from %>
+
+<%=f.label :event_date_to, "Event To" %>
+<%=f.date_field :event_date_to %>
+
+<%=f.label :event_deadline, "Event Deadline" %>
+<%=f.date_field :event_deadline %>
+
+<%=f.label :event_price_before_deadline, "Price Before Deadline" %>
+<%=f.text_field :event_price_before_deadline %>
+
+<%=f.label :event_price_after_deadline, "Price After Deadline" %>
+<%=f.text_field :event_price_after_deadline %>
+
+<%= f.submit "Submit"%>
+<% end %>
