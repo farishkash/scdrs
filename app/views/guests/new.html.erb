@@ -1,0 +1,30 @@
+<%= form_for @guest do |f| %>
+<%= f.label :guest_name, "Name" %>
+<%= f.text_field :guest_name %>
+
+<%= f.label :guest_address_1, "Address" %>
+<%= f.text_field :guest_address_1 %>
+
+<%= f.label :guest_city, "City" %>
+<%= f.text_field :guest_city %>
+
+<%= f.label :guest_state, "State" %>
+<%= f.text_field :guest_state %>
+
+<%= f.label :guest_zip, "Zip" %>
+<%= f.text_field :guest_zip  %>
+
+<%= f.label :guest_email, "Email" %>
+<%= f.text_field :guest_email %>
+
+<%= f.label :guest_phone_number, "Phone Number" %>
+<%= f.text_field :guest_phone_number %>
+
+<%= f.collection_select(:event_id, Event.all, :id, :event_name,{include_blank: 'Select Event'}, {class: "special"}) %>
+
+
+<%= f.submit "Submit" %>
+
+
+
+<% end %>
